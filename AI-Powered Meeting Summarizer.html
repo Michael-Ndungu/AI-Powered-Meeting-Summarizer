@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#output {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.output-section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Meeting Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI-Powered Meeting Summarizer</h1>
+        </header>
+
+        <main>
+            <form id="uploadForm">
+                <label for="fileInput" class="custom-file-upload">
+                    Choose your audio file
+                </label>
+                <input type="file" id="fileInput" name="file" accept="audio/*" required>
+
+                <button type="submit">Summarize</button>
+            </form>
+
+            <div id="output">
+                <div id="transcript" class="output-section">
+                    <h2>Transcript</h2>
+                    <p id="transcriptText"></p>
+                </div>
+
+                <div id="summary" class="output-section">
+                    <h2>Summary</h2>
+                    <p id="summaryText"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 AI-Powered Meeting Summarizer. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
